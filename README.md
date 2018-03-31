@@ -8,35 +8,41 @@ _So, I made this utility jar which does the sorting plus seperates new propertie
 
 ### Example:
   Let's assume we have a property file like this:: `data.properties`
-  `username=xyz
-   password=837363
-   userType=admin
-   etc=etc`
+    
+    username=xyz
+    password=837363
+    userType=admin
+    etc=etc
    
   After sorting you'll get something like this..
-  `#######
-   ## E ##
-   #######
+  
+    #######
+    ## E ##
+    #######
+    
+    etc=etc
+    
+    #######
+    ## P ##
+    #######
    
-   etc=etc
+    password=837363
    
-   #######
-   ## P ##
-   #######
+    #######
+    ## U ##
+    #######
    
-   password=837363
-   
-   #######
-   ## U ##
-   #######
-   
-   username=xyz
-   userType=admin`
+    username=xyz
+    userType=admin
 
 ### Running the Jar:
-  Just pass the file name as parameter to the jar as shown below
-  _cmd/shell_ : `java -jar <jar-name>.jar <property-file-name>.properties` OR `<jar-name>.jar <property-file-name>.properties`
+  Just pass the file name as parameter to the jar as shown below (_cmd/shell_) :
+    
+    java -jar <jar-name>.jar <property-file-name>.properties
+   OR  
+   
+    <jar-name>.jar <property-file-name>.properties
   
   ###### Note: 
-     It will create a backup as well like `file.properties` will be backed up as `file-old.properties`
-     Also while comparing two properties it ignore cases.(else all Upper case named property will be appeared first)
+     - It will create a backup as well like `file.properties` will be backed up as `file-old.properties`
+     - Also while comparing two properties it ignore cases.(else all Upper case named property will be appeared first)
